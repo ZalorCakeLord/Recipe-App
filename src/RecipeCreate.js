@@ -11,35 +11,35 @@ function RecipeCreate({addRecipe}) {
   const [recipe,recipeEdit]=useState(recipeInit)
 
   
-  const nameChange = (e) =>{
-    e.persist();
-    recipeEdit((v)=>{return{...v,name:e.target.value}})
+  const nameChange = (event) =>{
+    event.persist();
+    recipeEdit((value)=>{return{...value,name:event.target.value}})
   }
 
-  const cuisineChange = (e) =>{
-    e.persist();
-    recipeEdit((v)=>{return{...v,cuisine:e.target.value}})
+  const cuisineChange = (event) =>{
+    event.persist();
+    recipeEdit((value)=>{return{...value,cuisine:event.target.value}})
   }
 
-  const urlChange = (e) =>{
-    e.persist();
-    recipeEdit((v)=>{return{...v,photo:e.target.value}})
+  const urlChange = (event) =>{
+    event.persist();
+    console.log('url edited')
+    recipeEdit((value)=>{return{...value,photo:event.target.value}})
   }
 
-  const ingredientsChange = (e) =>{
-    e.persist();
-    recipeEdit((v)=>{return{...v,ingredients:e.target.value}})
+  const ingredientsChange = (event) =>{
+    event.persist();
+    recipeEdit((value)=>{return{...value,ingredients:event.target.value}})
   }
 
-  const preparationChange = (e) =>{
-    e.persist();
-    recipeEdit((v)=>{return{...v,preparation:e.target.value}})
+  const preparationChange = (event) =>{
+    event.persist();
+    recipeEdit((value)=>{return{...value,preparation:event.target.value}})
   }
   
 
-  const submit = (e) => {
-    e.preventDefault()
-    console.log(`Added ${recipe.name}`)
+  const submit = (event) => {
+    event.preventDefault()
     addRecipe(recipe)
     recipeEdit(recipeInit)
   }
