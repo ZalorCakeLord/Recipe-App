@@ -56,8 +56,8 @@ function RecipeCreate({addRecipe}) {
             <td> <input placeholder="name" id="name" type="text" name="name" required={true} onChange={nameChange} value={recipe.name}/> </td>
             <td> <input placeholder="cuisine" id="cuisine" type="text" name="cuisine" required={true} onChange={cuisineChange} value={recipe.cuisine}/> </td>
             <td><input placeholder="photo url" id="photo" name="photo" type="url" required={true} onChange={urlChange} value={recipe.photo}/></td>
-            <td> <input placeholder="ingredients" id="ingredients" type="text" name="ingredients" required={true} onChange={ingredientsChange} value={recipe.ingredients}/> </td>
-            <td> <input placeholder="preparation" id="preparation" type="text" name="preparation" required={true} onChange={preparationChange} value={recipe.preparation}/> </td>
+            <td><textarea name="ingredients"  placeholder="ingredients" id="ingredients" type="text" name="ingredients" required={true} onChange={ingredientsChange} value={recipe.ingredients}/> </td>
+            <td><textarea name="preparation" placeholder="preparation" id="preparation" type="text" name="preparation" required={true} onChange={preparationChange} value={recipe.preparation}/> </td>
             <td>
               <button type="submit">Create</button>
             </td>
