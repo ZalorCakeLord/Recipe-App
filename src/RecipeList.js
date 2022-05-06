@@ -1,7 +1,6 @@
 import React from "react";
 
 function RecipeList({list,setRecipes}) {
-  console.log(list)
   let recipes = []
   const deleteRecipe = (e) => {
     e.persist()
